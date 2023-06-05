@@ -1,0 +1,15 @@
+bin/
+obj/
+packages/
+*.suo
+*.user
+*.sln.docstates
+.vs/
+*.pdb
+*.dll.log
+*.userprefs
+*.vscode/
+*.vs/
+*.exe
+logs/
+temp/
