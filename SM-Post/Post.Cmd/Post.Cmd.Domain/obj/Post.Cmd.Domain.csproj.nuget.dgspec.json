@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -100,8 +100,8 @@
               "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj": {
                 "projectPath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj"
               },
-              "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj": {
-                "projectPath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj"
+              "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj": {
+                "projectPath": "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj"
               }
             }
           }
@@ -131,18 +131,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj": {
+    "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj",
+        "projectUniqueName": "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj",
         "projectName": "Post.Common",
-        "projectPath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj",
+        "projectPath": "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj",
         "packagesPath": "C:\\Users\\haabl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\obj\\",
+        "outputPath": "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -194,7 +194,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

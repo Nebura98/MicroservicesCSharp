@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "D2jsbq9/loQ4PhLK4+lDzvU9SODFscwd6BH947vPmus0HvwiD7L6ev2j+1/KWNgIO5HBjhheUmlM6P4P/wyCkQ==",
+  "dgSpecHash": "U+GtRurqVl7Neh3xY2cKR+cR12f1tIjuEVJBz0bXqFEelhcg55CrIgM5lgrn+5X+b1HHez2nTLMNCPQ8KOC2/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj",
   "expectedPackageFiles": [

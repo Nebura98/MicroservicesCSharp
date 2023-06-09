@@ -1,9 +1,7 @@
-using Microsoft.Extensions.Options;
-
-using MongoDB.Driver;
-
 using CQRS.Core.Domain;
 using CQRS.Core.Events;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using Post.Cmd.Infrastructure.Config;
 
 namespace Post.Cmd.Infrastructure.Repositories
