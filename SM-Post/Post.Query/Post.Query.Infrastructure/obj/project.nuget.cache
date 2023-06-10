@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cETzFrLB19A4wosH/U1RIvgBdUchugqkZJIrTKQ5nDrDzSsMnb8W5BiA2T1tfWOumOmtFrZeCYGzyBKtLCfExg==",
+  "dgSpecHash": "zG/wj8OZIu1DygXuZ/5Nagp2HZ5HGVfpVH3+jIxBMDntBRzTz+6gC3Tq4yHLYEBb/b0RDKPx2244O9IqgmT00A==",
   "success": true,
   "projectFilePath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Query\\Post.Query.Infrastructure\\Post.Query.Infrastructure.csproj",
   "expectedPackageFiles": [

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cYbY+FVAvuaOO56o/iznjj3ieWKs2CnU7I2a59uqNQ7GpmPKI7w4FSRnEVkaAMfdeqMf21WpeMDvgj11Pdi2CA==",
+  "dgSpecHash": "a/K0lWT4ZZAnpV8GXazHZXc0eAQYBDXhJcIMuzQJBhgsSiVuwf/Tf4fTiU6lr5fuLiFVjUJEXs9HtQY90btGyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj",
+  "projectFilePath": "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Common\\Post.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haabl\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\haabl\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
