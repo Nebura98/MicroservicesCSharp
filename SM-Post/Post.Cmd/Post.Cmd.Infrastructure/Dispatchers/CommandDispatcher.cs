@@ -5,16 +5,13 @@ namespace Post.Cmd.Infrastructure.Dispatchers
 {
     public class CommandDispatcher : ICommandDispatcher
     {
-
-        // private readonly Dictionary<Type, Func<BaseCommand, Task>> _handlers = new Dictionary<Type, Func<BaseCommand, Task>>();
         private readonly Dictionary<Type, Func<BaseCommand, Task>> _handlers = new();
-
 
         public void RegisterHandler<T>(Func<T, Task> handler) where T : BaseCommand
         {
             if (_handlers.ContainsKey(typeof(T)))
             {
-                throw new IndexOutOfRangeException("Cannot register the same command handler twice!");
+                throw new IndexOutOfRangeException("You cannot register the same command handler twice!");
             }
 
             _handlers.Add(typeof(T), x => handler((T)x));
@@ -28,9 +25,8 @@ namespace Post.Cmd.Infrastructure.Dispatchers
             }
             else
             {
-                throw new ArgumentNullException(nameof(handler), "No command was registered!");
+                throw new ArgumentNullException(nameof(handler), "No command handler was registered!");
             }
-            throw new NotImplementedException();
         }
     }
 }

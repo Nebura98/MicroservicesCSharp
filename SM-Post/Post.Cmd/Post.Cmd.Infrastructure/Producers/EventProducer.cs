@@ -1,14 +1,13 @@
+using System.Text.Json;
 using Confluent.Kafka;
 using CQRS.Core.Events;
 using CQRS.Core.Producers;
 using Microsoft.Extensions.Options;
-using System.Text.Json;
 
 namespace Post.Cmd.Infrastructure.Producers
 {
     public class EventProducer : IEventProducer
     {
-
         private readonly ProducerConfig _config;
 
         public EventProducer(IOptions<ProducerConfig> config)
@@ -33,9 +32,8 @@ namespace Post.Cmd.Infrastructure.Producers
 
             if (deliveryResult.Status == PersistenceStatus.NotPersisted)
             {
-                throw new Exception($"Could not produce {@event.GetType().Name} message to topic - {topic} due the following reason: {deliveryResult.Message}");
+                throw new Exception($"Could not produce {@event.GetType().Name} message to topic - {topic} due to the following reason: {deliveryResult.Message}.");
             }
-
         }
     }
 }

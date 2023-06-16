@@ -1,7 +1,7 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using CQRS.Core.Events;
 using Post.Common.Events;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Post.Query.Infrastructure.Converters
 {

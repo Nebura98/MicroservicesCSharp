@@ -9,15 +9,10 @@ namespace Post.Cmd.Domain.Aggregates
         private string _author;
         private readonly Dictionary<Guid, Tuple<string, string>> _comments = new();
 
-        public bool Active
-        {
-            get => _active;
-            set => _active = value;
-        }
+        public bool Active { get => _active; set => _active = value; }
 
         public PostAggregate()
         {
-
         }
 
         public PostAggregate(Guid id, string author, string message)
@@ -53,7 +48,7 @@ namespace Post.Cmd.Domain.Aggregates
             RaiseEvent(new MessageUpdatedEvent
             {
                 Id = _id,
-                Message = message,
+                Message = message
             });
         }
 
@@ -117,7 +112,7 @@ namespace Post.Cmd.Domain.Aggregates
 
             if (!_comments[commentId].Item2.Equals(username, StringComparison.CurrentCultureIgnoreCase))
             {
-                throw new InvalidProgramException("You are not allow to edit a comment that was create by another user!");
+                throw new InvalidOperationException("You are not allowed to edit a comment that was made by another user!");
             }
 
             RaiseEvent(new CommentUpdatedEvent
@@ -136,10 +131,8 @@ namespace Post.Cmd.Domain.Aggregates
             _comments[@event.CommentId] = new Tuple<string, string>(@event.Comment, @event.Username);
         }
 
-
         public void RemoveComment(Guid commentId, string username)
         {
-
             if (!_active)
             {
                 throw new InvalidOperationException("You cannot remove a comment of an inactive post!");
@@ -147,7 +140,7 @@ namespace Post.Cmd.Domain.Aggregates
 
             if (!_comments[commentId].Item2.Equals(username, StringComparison.CurrentCultureIgnoreCase))
             {
-                throw new InvalidProgramException("You are not allow to remove a comment that was made by another user!");
+                throw new InvalidOperationException("You are not allowed to remove a comment that was made by another user!");
             }
 
             RaiseEvent(new CommentRemovedEvent
@@ -167,18 +160,15 @@ namespace Post.Cmd.Domain.Aggregates
         {
             if (!_active)
             {
-                throw new InvalidOperationException("The post has already been removed");
+                throw new InvalidOperationException("The post has already been removed!");
             }
 
             if (!_author.Equals(username, StringComparison.CurrentCultureIgnoreCase))
             {
-                throw new InvalidOperationException("You are not allowed to delete a post that was made by someone else!");
+                throw new InvalidOperationException("You are not allowed to delete a post that was made by somebody else!");
             }
 
-            RaiseEvent(new PostRemovedEvent
-            {
-                Id = _id
-            });
+            RaiseEvent(new PostRemovedEvent { Id = _id });
         }
 
         public void Apply(PostRemovedEvent @event)

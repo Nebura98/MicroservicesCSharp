@@ -8,24 +8,24 @@ namespace Post.Cmd.Infrastructure.Repositories
 {
     public class EventStoreRepository : IEventStoreRepository
     {
-        private readonly IMongoCollection<EventModel> _eventStoreCollectionl;
+        private readonly IMongoCollection<EventModel> _eventStoreCollection;
 
         public EventStoreRepository(IOptions<MongoDbConfig> config)
         {
             var mongoClient = new MongoClient(config.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(config.Value.DataBase);
 
-            _eventStoreCollectionl = mongoDatabase.GetCollection<EventModel>(config.Value.Collection);
+            _eventStoreCollection = mongoDatabase.GetCollection<EventModel>(config.Value.Collection);
         }
 
         public async Task<List<EventModel>> FindByAggregateId(Guid aggregateId)
         {
-            return await _eventStoreCollectionl.Find(x => x.AggregateIdentifier == aggregateId).ToListAsync().ConfigureAwait(false);
+            return await _eventStoreCollection.Find(x => x.AggregateIdentifier == aggregateId).ToListAsync();
         }
 
         public async Task SaveAsync(EventModel @event)
         {
-            await _eventStoreCollectionl.InsertOneAsync(@event).ConfigureAwait(false);
+            await _eventStoreCollection.InsertOneAsync(@event);
         }
     }
 }

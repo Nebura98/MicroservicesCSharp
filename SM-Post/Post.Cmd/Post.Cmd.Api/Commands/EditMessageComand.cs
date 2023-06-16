@@ -3,7 +3,7 @@ using CQRS.Core.Commands;
 
 namespace Post.Cmd.Api.Commands
 {
-    public class EditMessageComand : BaseCommand
+    public class EditMessageCommand : BaseCommand
     {
         public string Message { get; set; }
     }

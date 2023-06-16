@@ -5,7 +5,7 @@ using CQRS.Core.Infrastructure;
 using CQRS.Core.Producers;
 using Post.Cmd.Domain.Aggregates;
 
-namespace Post.Cmd.Infrastructure.Store
+namespace Post.Cmd.Infrastructure.Stores
 {
     public class EventStore : IEventStore
     {

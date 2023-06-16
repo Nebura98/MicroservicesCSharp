@@ -1,21 +1,21 @@
-using Microsoft.Extensions.Options;
-using Confluent.Kafka;
 using System.Text.Json;
-
+using Confluent.Kafka;
 using CQRS.Core.Consumers;
-using Post.Query.Infrastructure.Handlers;
-using Post.Query.Infrastructure.Converters;
 using CQRS.Core.Events;
+using Microsoft.Extensions.Options;
+using Post.Query.Infrastructure.Converters;
+using Post.Query.Infrastructure.Handlers;
 
-namespace Post.Query.Infrastructure.Consumer
+namespace Post.Query.Infrastructure.Consumers
 {
     public class EventConsumer : IEventConsumer
     {
         private readonly ConsumerConfig _config;
         private readonly IEventHandler _eventHandler;
 
-
-        public EventConsumer(IOptions<ConsumerConfig> config, IEventHandler eventHandler)
+        public EventConsumer(
+            IOptions<ConsumerConfig> config,
+            IEventHandler eventHandler)
         {
             _config = config.Value;
             _eventHandler = eventHandler;
@@ -32,12 +32,12 @@ namespace Post.Query.Infrastructure.Consumer
 
             while (true)
             {
-                var consumerResult = consumer.Consume();
+                var consumeResult = consumer.Consume();
 
-                if (consumerResult?.Message == null) continue;
+                if (consumeResult?.Message == null) continue;
 
                 var options = new JsonSerializerOptions { Converters = { new EventJsonConverter() } };
-                var @event = JsonSerializer.Deserialize<BaseEvent>(consumerResult.Message.Value, options);
+                var @event = JsonSerializer.Deserialize<BaseEvent>(consumeResult.Message.Value, options);
                 var handlerMethod = _eventHandler.GetType().GetMethod("On", new Type[] { @event.GetType() });
 
                 if (handlerMethod == null)
@@ -46,7 +46,7 @@ namespace Post.Query.Infrastructure.Consumer
                 }
 
                 handlerMethod.Invoke(_eventHandler, new object[] { @event });
-                consumer.Commit(consumerResult);
+                consumer.Commit(consumeResult);
             }
         }
     }

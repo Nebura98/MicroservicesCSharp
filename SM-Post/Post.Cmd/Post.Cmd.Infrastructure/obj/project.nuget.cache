@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "24eqixtD8qtu2nIiBLJXc1+FA5u4NN+08IwT/lzUXAMLeam8IGGCho1GDvQ22dxC69CPvlv0tcWvZ6GyMPfL9g==",
+  "dgSpecHash": "em/voWbFuSJyh66bs55Im9S4XWEnBiZjHDBax5FiQ/6TEDFgzI6oO1b+603jQSTLHc6ZRIz/Rmo3yCwZM6sqBw==",
   "success": true,
   "projectFilePath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Cmd\\Post.Cmd.Infrastructure\\Post.Cmd.Infrastructure.csproj",
   "expectedPackageFiles": [

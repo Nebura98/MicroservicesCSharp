@@ -19,7 +19,7 @@ namespace Post.Cmd.Api.Commands
             await _eventSourcingHandler.SaveAsync(aggregate);
         }
 
-        public async Task HandleAsync(EditMessageComand command)
+        public async Task HandleAsync(EditMessageCommand command)
         {
             var aggregate = await _eventSourcingHandler.GetByIdAsync(command.Id);
             aggregate.EditMessage(command.Message);
@@ -27,7 +27,7 @@ namespace Post.Cmd.Api.Commands
             await _eventSourcingHandler.SaveAsync(aggregate);
         }
 
-        public async Task HandleAsync(LikePostComand command)
+        public async Task HandleAsync(LikePostCommand command)
         {
             var aggregate = await _eventSourcingHandler.GetByIdAsync(command.Id);
             aggregate.LikePost();
@@ -35,7 +35,7 @@ namespace Post.Cmd.Api.Commands
             await _eventSourcingHandler.SaveAsync(aggregate);
         }
 
-        public async Task HandleAsync(AddCommentComand command)
+        public async Task HandleAsync(AddCommentCommand command)
         {
             var aggregate = await _eventSourcingHandler.GetByIdAsync(command.Id);
             aggregate.AddComment(command.Comment, command.Username);
