@@ -1,8 +1,8 @@
 using System.Text.Json;
 using Confluent.Kafka;
+using Microsoft.Extensions.Options;
 using CQRS.Core.Consumers;
 using CQRS.Core.Events;
-using Microsoft.Extensions.Options;
 using Post.Query.Infrastructure.Converters;
 using Post.Query.Infrastructure.Handlers;
 

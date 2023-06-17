@@ -7,12 +7,14 @@ namespace Post.Query.Infrastructure.Dispatchers
     public class QueryDispatcher : IQueryDispatcher<PostEntity>
     {
         private readonly Dictionary<Type, Func<BaseQuery, Task<List<PostEntity>>>> _handlers = new();
+
         public void RegisterHandler<TQuery>(Func<TQuery, Task<List<PostEntity>>> handler) where TQuery : BaseQuery
         {
             if (_handlers.ContainsKey(typeof(TQuery)))
             {
                 throw new IndexOutOfRangeException("You cannot register the same query handler twice!");
             }
+
             _handlers.Add(typeof(TQuery), x => handler((TQuery)x));
         }
 
@@ -22,6 +24,7 @@ namespace Post.Query.Infrastructure.Dispatchers
             {
                 return await handler(query);
             }
+
             throw new ArgumentNullException(nameof(handler), "No query handler was registered!");
         }
     }

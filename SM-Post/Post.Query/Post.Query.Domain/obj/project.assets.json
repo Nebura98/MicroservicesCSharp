@@ -794,11 +794,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj",
+      "projectUniqueName": "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj",
       "projectName": "Post.Query.Domain",
-      "projectPath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj",
+      "projectPath": "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj",
       "packagesPath": "C:\\Users\\haabl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Query\\Post.Query.Domain\\obj\\",
+      "outputPath": "c:\\Users\\haabl\\Documents\\Microservices\\Microservices-project\\SM-Post\\Post.Query\\Post.Query.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

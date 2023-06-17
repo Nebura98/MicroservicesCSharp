@@ -2,7 +2,7 @@ using CQRS.Core.Queries;
 
 namespace Post.Query.Api.Queries
 {
-    public class FindPostWithCommentQuery : BaseQuery
+    public class FindPostsWithCommentsQuery : BaseQuery
     {
 
     }
